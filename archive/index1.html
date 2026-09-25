@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="[[YOUR NAME]] — Agentic AI, data systems, and workflow automation.">
+  <meta name="theme-color" content="#081321">
+
+  <title>[[YOUR NAME]] | Agentic AI & Systems Architecture</title>
+
+  <style>
+    :root {
+      --bg: #081321;
+      --bg-soft: #0e2136;
+      --panel: #112b46;
+      --paper: #f4f3ee;
+      --text: #ecf5fc;
+      --ink: #0e1d2b;
+      --muted: #a8bdcc;
+      --muted-dark: #536979;
+      --line: rgba(255, 255, 255, 0.14);
+      --line-dark: rgba(14, 29, 43, 0.15);
+      --lime: #b7f442;
+      --aqua: #70e1d6;
+      --violet: #a78bfa;
+      --max: 1120px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 82% 8%, rgba(112, 225, 214, 0.14), transparent 25%),
+        radial-gradient(circle at 8% 56%, rgba(183, 244, 66, 0.09), transparent 28%),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--aqua);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 10px 14px;
+      color: var(--ink);
+      background: var(--lime);
+      border-radius: 8px;
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8, 19, 33, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 33px;
+      height: 33px;
+      color: var(--ink);
+      background: var(--lime);
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.76rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.87rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--aqua);
+    }
+
+    .nav-cta {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .nav-cta:hover {
+      color: var(--ink);
+      background: var(--lime);
+      border-color: var(--lime);
+    }
+
+    .hero {
+      padding: 100px 0 78px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(310px, 0.75fr);
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 18px;
+      color: var(--aqua);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--lime);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(183, 244, 66, 0.12);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin-bottom: 24px;
+      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    h1 span {
+      color: var(--aqua);
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 650px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 42px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 12px 17px;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      color: var(--ink);
+      background: var(--lime);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta div {
+      display: grid;
+      gap: 2px;
+    }
+
+    .meta small {
+      color: #8097a8;
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-size: 0.83rem;
+    }
+
+    .system-card {
+      min-height: 455px;
+      padding: 25px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 47%, rgba(112, 225, 214, 0.18), transparent 29%),
+        linear-gradient(145deg, #183c5e, #0c1a2a 72%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .system-top {
+      display: flex;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, 0.65);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .system-top span:last-child {
+      color: var(--lime);
+    }
+
+    .orbit-space {
+      position: relative;
+      height: 278px;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid rgba(112, 225, 214, 0.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .orbit-a {
+      width: 164px;
+      height: 164px;
+    }
+
+    .orbit-b {
+      width: 253px;
+      height: 253px;
+      border-color: rgba(183, 244, 66, 0.3);
+      border-style: dashed;
+    }
+
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: grid;
+      place-items: center;
+      width: 75px;
+      height: 75px;
+      color: var(--ink);
+      background: var(--lime);
+      border-radius: 50%;
+      box-shadow: 0 0 0 15px rgba(183, 244, 66, 0.1);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 1.2rem;
+      font-weight: 800;
+      transform: translate(-50%, -50%);
+    }
+
+    .node {
+      position: absolute;
+      padding: 5px 7px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 5px;
+      background: rgba(8, 19, 33, 0.78);
+      color: var(--aqua);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.65rem;
+    }
+
+    .node-data {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .node-tools {
+      right: 1px;
+      bottom: 75px;
+    }
+
+    .node-workflows {
+      bottom: 42px;
+      left: 2px;
+      color: var(--lime);
+    }
+
+    .status-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.78rem;
+    }
+
+    .status-row strong {
+      color: var(--text);
+      text-align: right;
+    }
+
+    .capability-bar {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 25px;
+      border-right: 1px solid var(--line);
+    }
+
+    .capability:first-child {
+      border-left: 1px solid var(--line);
+    }
+
+    .capability .number {
+      color: var(--lime);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+    }
+
+    .capability p {
+      margin: 23px 0 0;
+      font-size: 0.93rem;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-light {
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      gap: 88px;
+      align-items: start;
+    }
+
+    .section-light .eyebrow {
+      color: #147e77;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(2.15rem, 4vw, 3.65rem);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+    }
+
+    .section-copy {
+      color: var(--muted-dark);
+      font-size: 1rem;
+    }
+
+    .section-copy .lead {
+      color: var(--ink);
+      font-size: 1.28rem;
+      font-weight: 650;
+      line-height: 1.6;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .principle {
+      padding-top: 14px;
+      border-top: 2px solid var(--ink);
+    }
+
+    .principle small {
+      color: #6b7e8c;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .principle h3 {
+      margin: 14px 0 7px;
+      font-size: 1rem;
+    }
+
+    .principle p {
+      margin: 0;
+      font-size: 0.84rem;
+    }
+
+    .section-dark {
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .section-dark .section-intro {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 48px;
+      margin-bottom: 50px;
+    }
+
+    .section-dark .section-intro > p:last-child {
+      max-width: 395px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .service {
+      min-height: 325px;
+      padding: 27px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service small {
+      color: var(--lime);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+    }
+
+    .service h3 {
+      margin: 62px 0 13px;
+      font-size: 1.28rem;
+      line-height: 1.2;
+    }
+
+    .service p {
+      min-height: 74px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .service ul {
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--aqua);
+      font-size: 0.77rem;
+      line-height: 1.85;
+    }
+
+    .service li::before {
+      content: "— ";
+      color: var(--lime);
+    }
+
+    .projects-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .projects-header > p {
+      max-width: 430px;
+      margin: 0;
+      color: var(--muted-dark);
+    }
+
+    .project-list {
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 60px minmax(0, 1fr) 95px;
+      gap: 25px;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .project-number,
+    .project-type {
+      color: #187f78;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+    }
+
+    .project h3 {
+      margin: 9px 0 12px;
+      font-size: clamp(1.35rem, 2.1vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .project p:not(.project-type) {
+      max-width: 690px;
+      margin-bottom: 16px;
+      color: var(--muted-dark);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tags span {
+      padding: 5px 8px;
+      border: 1px solid var(--line-dark);
+      border-radius: 5px;
+      color: #526979;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.65rem;
+    }
+
+    .project-link {
+      color: #117971;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .project-link:hover {
+      color: #0c5b55;
+    }
+
+    .resume {
+      background: #e9e8e2;
+    }
+
+    .resume-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      gap: 88px;
+    }
+
+    .resume-layout .eyebrow {
+      color: #147e77;
+    }
+
+    .resume-link {
+      display: inline-flex;
+      gap: 9px;
+      margin-top: 26px;
+      color: #0c756e;
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .resume-content {
+      color: var(--muted-dark);
+    }
+
+    .resume-block {
+      padding-bottom: 31px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .resume-block + .resume-block {
+      padding-top: 31px;
+    }
+
+    .resume-label {
+      margin-bottom: 13px;
+      color: #637786;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skills div {
+      display: grid;
+      gap: 7px;
+    }
+
+    .skills strong {
+      color: var(--ink);
+      font-size: 0.88rem;
+    }
+
+    .skills span {
+      font-size: 0.83rem;
+      line-height: 1.55;
+    }
+
+    .experience {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .experience time {
+      color: #657985;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+    }
+
+    .experience h3 {
+      margin: 0 0 3px;
+      color: var(--ink);
+      font-size: 1rem;
+    }
+
+    .experience .company {
+      margin-bottom: 8px;
+      color: #167e77;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .experience p:last-child {
+      margin-bottom: 0;
+      font-size: 0.86rem;
+    }
+
+    .contact {
+      padding: 105px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 85px;
+      align-items: start;
+    }
+
+    .contact-card {
+      padding: 29px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .contact-card > p {
+      color: var(--muted);
+    }
+
+    .email {
+      display: inline-block;
+      margin: 18px 0 30px;
+      color: var(--lime);
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links {
+      display: grid;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-links a {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .contact-links a:hover {
+      color: var(--aqua);
+    }
+
+    footer {
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.74rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-grid p {
+      margin: 0;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .section-heading,
+      .resume-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .system-card {
+        max-width: 580px;
+      }
+
+      .capability-grid,
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-dark .section-intro,
+      .projects-header {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+      }
+
+      .hero {
+        padding: 72px 0 58px;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .capability-grid,
+      .services,
+      .principles,
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .capability,
+      .capability:first-child {
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section,
+      .contact {
+        padding: 78px 0;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .experience {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 410px) {
+      .nav-cta {
+        display: none;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .system-card {
+        min-height: 430px;
+        padding: 18px;
+      }
+
+      .orbit-space {
+        transform: scale(0.87);
+        transform-origin: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>XA</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Start a conversation</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> AVAILABLE FOR SELECT PROJECTS</p>
+
+          <h1>
+            Building practical <span>agentic AI systems</span> for complex work.
+          </h1>
+
+          <p>
+            I design reliable AI, data, and software systems that connect knowledge,
+            tools, workflows, and human judgment. My work spans agentic applications,
+            RAG, data platforms, integration architecture, and operational automation.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="#projects">View selected work <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="resume.pdf" target="_blank" rel="noopener">Download resume <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <div class="meta">
+            <div>
+              <small>Focus</small>
+              <strong>AI systems &amp; automation</strong>
+            </div>
+            <div>
+              <small>Location</small>
+              <strong>New York, United States</strong>
+            </div>
+            <div>
+              <small>Engagement</small>
+              <strong>Architecture · Build · Advisory</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="system-card" aria-label="Professional summary">
+          <div class="system-top">
+            <span>System profile</span>
+            <span>v1.0</span>
+          </div>
+
+          <div class="orbit-space" aria-hidden="true">
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <div class="core">AI</div>
+            <span class="node node-data">DATA</span>
+            <span class="node node-tools">TOOLS</span>
+            <span class="node node-workflows">WORKFLOWS</span>
+         </div>
+
+          <div class="status-list">
+            <div class="status-row">
+              <span>Primary domain</span>
+              <strong>Agentic systems</strong>
+            </div>
+            <div class="status-row">
+              <span>Operating model</span>
+              <strong>Human-in-the-loop</strong>
+            </div>
+            <div class="status-row">
+              <span>Delivery approach</span>
+              <strong>Open &amp; maintainable</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="capability-bar" aria-label="Core capabilities">
+      <div class="container capability-grid">
+        <div class="capability">
+          <span class="number">01</span>
+          <p>Agentic AI &amp;<br>tool-using systems</p>
+        </div>
+        <div class="capability">
+          <span class="number">02</span>
+          <p>RAG &amp; document<br>intelligence</p>
+        </div>
+        <div class="capability">
+          <span class="number">03</span>
+          <p>Data platforms &amp;<br>analytics engineering</p>
+        </div>
+        <div class="capability">
+          <span class="number">04</span>
+          <p>Integration, DevOps &amp;<br>reliable automation</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container section-heading">
+        <div>
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2>Systems thinking for AI that must work in the real world.</h2>
+       </div>
+
+        <div class="section-copy">
+          <p class="lead">
+            I work at the intersection of AI, data, software architecture, and operational delivery.
+            I help turn unstructured information, fragmented systems, and manual processes into
+            auditable, useful workflows.
+          </p>
+          <p>
+            My approach prioritizes explicit requirements, secure integration boundaries,
+            source-grounded outputs, observability, and human review for consequential actions.
+            The goal is not AI theater—it is a maintainable system that improves how people
+            research, decide, build, and operate.
+          </p>
+
+          <div class="principles">
+            <article class="principle">
+              <small>01</small>
+              <h3>Grounded</h3>
+              <p>Use trusted sources, metadata, citations, and measurable quality controls.</p>
+            </article>
+            <article class="principle">
+              <small>02</small>
+              <h3>Integrated</h3>
+              <p>Connect agents to APIs, databases, documents, and enterprise workflows.</p>
+            </article>
+            <article class="principle">
+              <small>03</small>
+              <h3>Governed</h3>
+              <p>Build permissioning, approval gates, logging, evaluation, and fallback paths.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="expertise">
+      <div class="container">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">02 / EXPERTISE</p>
+            <h2>Capabilities across the full delivery lifecycle.</h2>
+          </div>
+          <p>
+            From strategy and architecture through prototyping, implementation,
+            documentation, and operational improvement.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <small>A1</small>
+            <h3>Agentic AI Systems</h3>
+            <p>AI agents, multi-step planning, tool use, approvals, memory, evaluation, and operational controls.</p>
+            <ul>
+              <li>Tool-using agents</li>
+              <li>MCP integrations</li>
+              <li>Human approval workflows</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <small>A2</small>
+            <h3>RAG &amp; Knowledge Systems</h3>
+            <p>Document ingestion, OCR, chunking, retrieval, reranking, citations, and knowledge-access interfaces.</p>
+            <ul>
+              <li>Private knowledge assistants</li>
+              <li>Document intelligence</li>
+              <li>Vector and hybrid search</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <small>A3</small>
+            <h3>Data &amp; Analytics Engineering</h3>
+            <p>Data pipelines, semantic modeling, SQL, analytics workflows, data quality, and decision-support systems.</p>
+            <ul>
+              <li>ETL / ELT pipelines</li>
+              <li>Analytics and reporting</li>
+              <li>Data modeling and governance</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <small>A4</small>
+            <h3>Platforms &amp; Integration</h3>
+            <p>API architecture, Docker environments, workflow orchestration, observability, and enterprise integration.</p>
+            <ul>
+              <li>REST APIs and webhooks</li>
+              <li>Docker and Linux</li>
+              <li>CI/CD and operational reliability</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <div>
+            <p class="eyebrow">03 / SELECTED WORK</p>
+            <h2>Representative project areas.</h2>
+          </div>
+          <p>
+            Replace these placeholders with projects you are permitted to describe publicly.
+            Remove confidential names, data, client details, and internal metrics.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div>
+              <p class="project-type">AGENTIC AI / KNOWLEDGE OPERATIONS</p>
+              <h3>Source-grounded research and document-intelligence workflow</h3>
+              <p>
+                [Replace with a concise project summary: the business problem, the system
+                architecture, your role, the tools used, and the outcome.]
+              </p>
+              <div class="tags">
+                <span>Python</span>
+                <span>RAG</span>
+                <span>Vector Search</span>
+                <span>APIs</span>
+                <span>Human Review</span>
+              </div>
+            </div>
+            <a class="project-link" href="#contact">Discuss ↗</a>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02</div>
+            <div>
+              <p class="project-type">DATA ENGINEERING / ANALYTICS</p>
+              <h3>Integrated analytics and semantic-data platform</h3>
+              <p>
+                [Replace with a concise project summary: data sources, pipeline design,
+                semantic layer, governance controls, dashboards, and measurable impact.]
+              </p>
+              <div class="tags">
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Data Modeling</span>
+                <span>Dashboards</span>
+                <span>Data Quality</span>
+              </div>
+            </div>
+            <a class="project-link" href="#contact">Discuss ↗</a>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03</div>
+            <div>
+              <p class="project-type">AUTOMATION / PLATFORM RELIABILITY</p>
+              <h3>Containerized workflow platform and operational control plane</h3>
+              <p>
+                [Replace with a concise project summary: workflow automation, container
+                architecture, integrations, monitoring, approvals, and operational outcomes.]
+              </p>
+              <div class="tags">
+                <span>Docker</span>
+                <span>Linux</span>
+                <span>APIs</span>
+                <span>Observability</span>
+                <span>Automation</span>
+              </div>
+            </div>
+            <a class="project-link" href="#contact">Discuss ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resume" id="resume">
+      <div class="container resume-layout">
+        <div>
+          <p class="eyebrow">04 / RESUME</p>
+          <h2>Experience, technical depth, and delivery focus.</h2>
+          <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">
+            Download full resume <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="resume-content">
+          <div class="resume-block">
+            <p class="resume-label">Professional summary</p>
+            <p>
+              [Add a 3–5 sentence professional summary with your actual experience,
+              domain specialization, and the types of work you want to attract.]
+            </p>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Core technical skills</p>
+            <div class="skills">
+              <div>
+                <strong>AI &amp; Data</strong>
+                <span>Python, RAG, LLMs, MCP, embeddings, vector search, SQL, analytics engineering</span>
+              </div>
+              <div>
+                <strong>Architecture</strong>
+                <span>APIs, integration, workflow design, enterprise systems, governance, documentation</span>
+              </div>
+              <div>
+                <strong>Platform &amp; DevOps</strong>
+                <span>Docker, Docker Compose, Linux, CI/CD, observability, cloud-native patterns</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Experience</p>
+
+            <article class="experience">
+              <time>[[YYYY]] — Present</time>
+              <div>
+                <h3>[[TITLE OR ROLE]]</h3>
+                <p class="company">[[COMPANY / CONSULTING PRACTICE]]</p>
+                <p>[[Add one to three concise, outcome-oriented bullets or sentences.]]</p>
+              </div>
+            </article>
+
+            <article class="experience">
+              <time>[[YYYY]] — [[YYYY]]</time>
+              <div>
+                <h3>[[TITLE OR ROLE]]</h3>
+                <p class="company">[[COMPANY]]</p>
+                <p>[[Add one to three concise, outcome-oriented bullets or sentences.]]</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Education &amp; credentials</p>
+            <p>[[Add degree(s), institution(s), certifications, and selected professional development.]]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">05 / CONTACT</p>
+          <h2>Have a complex workflow, data problem, or AI system to build?</h2>
+        </div>
+
+        <div class="contact-card">
+          <p>
+            I am available for architecture advisory, technical discovery, implementation
+            planning, prototype development, and systems-integration engagements.
+          </p>
+
+          <a class="email" href="mailto:[[YOUR_EMAIL]]">[[YOUR_EMAIL]]</a>
+
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/xaimpl" target="_blank" rel="noopener">
+              <span>LinkedIn</span><span>↗</span>
+            </a>
+            <a href="[[GITHUB_URL]]" target="_blank" rel="noopener">
+              <span>GitHub</span><span>↗</span>
+            </a>
+            <a href="[[CALENDAR_OR_CONTACT_URL]]" target="_blank" rel="noopener">
+              <span>Schedule a conversation</span><span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p>© 2026 [[YOUR NAME]]. All rights reserved.</p>
+      <p>Built for clear thinking, reliable systems, and useful automation.</p>
+    </div>
+  </footer>
+</body>
+</html>
