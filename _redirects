@@ -1,0 +1,7 @@
+# Redirect rules for portfolio-pages
+# Add path-level redirects here as needed
+# Format: /source-path /destination status-code
+
+# Example:
+# /old-project /projects/old-project 301
+# /resume /resume.pdf 302
