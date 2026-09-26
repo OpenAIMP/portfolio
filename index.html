@@ -3,107 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[[YOUR NAME]] — agentic AI, data engineering, systems architecture, and workflow automation.">
+  <meta name="description" content="[[YOUR NAME]] — Agentic AI, data engineering, software architecture, and intelligent workflow automation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07111f">
+
   <title>[[YOUR NAME]] | Agentic AI & Systems Architecture</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="Home">
-        <span class="brand-mark">&lt;/&gt;</span><span>XA</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>[[YOUR INITIALS]]</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/" aria-current="page">Home</a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
         <a href="/about/">About</a>
         <a href="/expertise/">Expertise</a>
         <a href="/projects/">Projects</a>
         <a href="/resume/">Resume</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="/#contact">Contact</a>
+
+      <a class="nav-cta" href="#contact">Start a conversation</a>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Agentic AI · Data · Architecture</p>
-          <h1>Building practical <em>agentic AI systems</em> for complex work.</h1>
-          <p class="lead">
-            I design AI, data, and software systems that connect knowledge,
-            tools, workflows, and human judgment. My focus is maintainable,
-            source-grounded solutions with appropriate operational controls.
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            AVAILABLE FOR SELECT PROJECTS
           </p>
-          <div class="actions">
-            <a class="button button-primary" href="/projects/">Explore projects</a>
-            <a class="button button-secondary" href="/resume/">View resume</a>
+
+          <h1>
+            Building practical
+            <span>agentic AI systems</span>
+            for complex work.
+          </h1>
+
+          <p class="hero-summary">
+            I design reliable AI, data, and software systems that connect knowledge,
+            tools, workflows, and human judgment. My work spans agentic applications,
+            RAG, data platforms, integration architecture, and operational automation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="/projects/">
+              View selected work
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noopener">
+              Download resume
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <span class="meta-label">Focus</span>
+              <span class="meta-value">AI systems & automation</span>
+            </div>
+            <div>
+              <span class="meta-label">Location</span>
+              <span class="meta-value">New York, United States</span>
+            </div>
+            <div>
+              <span class="meta-label">Engagement</span>
+              <span class="meta-value">Architecture · Build · Advisory</span>
+            </div>
           </div>
         </div>
 
-        <aside class="hero-panel">
-          <p class="kicker">How I work</p>
-          <h2>Useful systems, not AI theater.</h2>
-          <p>
-            Design around the real workflow: trusted information, secure
-            integrations, measurable quality, observable behavior, and
-            human review for consequential actions.
-          </p>
+        <aside class="hero-panel" aria-label="Professional summary">
+          <div class="panel-topline">
+            <span>System profile</span>
+            <span class="panel-code">v1.0</span>
+          </div>
+
+          <div class="profile-orbit" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="core-node">AI</div>
+            <span class="node node-a">DATA</span>
+            <span class="node node-b">TOOLS</span>
+            <span class="node node-c">WORKFLOWS</span>
+          </div>
+
+          <div class="panel-details">
+            <div class="detail-row">
+              <span>Primary domain</span>
+              <strong>Agentic systems</strong>
+            </div>
+            <div class="detail-row">
+              <span>Operating model</span>
+              <strong>Human-in-the-loop</strong>
+            </div>
+            <div class="detail-row">
+              <span>Delivery approach</span>
+              <strong>Open & maintainable</strong>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="focus">
-      <div class="container">
-        <p class="eyebrow">What I work on</p>
-        <h2>From architecture to operational delivery.</h2>
-        <div class="cards">
-          <article class="card">
-            <p class="kicker">01 / Agentic AI</p>
-            <h3>Tool-using workflows</h3>
-            <p>Agent design, MCP/API integrations, approval boundaries, evaluation, and observability.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">02 / Knowledge</p>
-            <h3>RAG and document intelligence</h3>
-            <p>Document extraction, retrieval, reranking, grounded answers, and validation.</p>
-          </article>
-          <article class="card">
-            <p class="kicker">03 / Systems</p>
-            <h3>Data and platform engineering</h3>
-            <p>Data pipelines, analytics architecture, Docker environments, and enterprise integration.</p>
-          </article>
+    <section class="proof-strip" aria-label="Core capabilities">
+      <div class="container proof-grid">
+        <div>
+          <span class="proof-number">01</span>
+          <p>Agentic AI &<br>tool-using systems</p>
         </div>
-        <div class="actions">
-          <a class="button button-secondary" href="/expertise/">View capabilities</a>
+        <div>
+          <span class="proof-number">02</span>
+          <p>RAG & document<br>intelligence</p>
+        </div>
+        <div>
+          <span class="proof-number">03</span>
+          <p>Data platforms &<br>analytics engineering</p>
+        </div>
+        <div>
+          <span class="proof-number">04</span>
+          <p>Integration, DevOps &<br>reliable automation</p>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's discuss a system worth building.</h2>
-        <p>
-          Connect with me on
-          <a href="https://www.linkedin.com/in/xaimpl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          or email
-          <a href="mailto:[[YOUR EMAIL]]">[[YOUR EMAIL]]</a>.
-        </p>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">05 / CONTACT</p>
+          <h2>Have a complex workflow, data problem, or AI system to build?</h2>
+        </div>
+
+        <div class="contact-card">
+          <p>
+            I am available for architecture advisory, technical discovery, implementation
+            planning, prototype development, and systems-integration engagements.
+          </p>
+
+          <a class="contact-email" href="mailto:[[YOUR_EMAIL]]">[[YOUR_EMAIL]]</a>
+
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/xaimpl" target="_blank" rel="noopener">
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+            <a href="[[GITHUB_URL]]" target="_blank" rel="noopener">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a href="[[CALENDAR_OR_CONTACT_URL]]" target="_blank" rel="noopener">
+              Schedule a conversation <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 [[YOUR NAME]].</p>
-      <p>Agentic AI · Data · Systems Architecture</p>
+    <div class="container footer-wrap">
+      <p>© <span id="year">2026</span> [[YOUR NAME]]. All rights reserved.</p>
+      <p>Built for clear thinking, reliable systems, and useful automation.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
