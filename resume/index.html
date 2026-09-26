@@ -3,98 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional experience and technical skills of [[YOUR NAME]].">
-  <title>Resume | [[YOUR NAME]]</title>
+  <meta name="description" content="[[YOUR NAME]] — Agentic AI, data engineering, software architecture, and intelligent workflow automation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07111f">
+
+  <title>[[YOUR NAME]] | Agentic AI & Systems Architecture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="Home">
-        <span class="brand-mark">&lt;/&gt;</span><span>XA</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Homepage">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>[[YOUR INITIALS]]</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/expertise/">Expertise</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resume/" aria-current="page">Resume</a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/#about">About</a>
+        <a href="/#expertise">Expertise</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#resume">Resume</a>
+        <a href="/#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="/#contact">Contact</a>
+
+      <a class="nav-cta" href="/#contact">Start a conversation</a>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="page-intro">
-      <div class="container">
-        <p class="eyebrow">Resume</p>
-        <h1>Experience and technical depth.</h1>
-        <p class="lead">
-          [[Write a concise, factual summary of your experience and
-          the roles or engagements you are seeking.]]
-        </p>
-        <!-- Add this only after resume.pdf exists:
-        <a class="button button-primary" href="/resume.pdf" target="_blank" rel="noopener">
-          Download PDF resume
-        </a>
-        -->
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div><h2>Professional experience</h2></div>
-        <div>
-          <article class="timeline-item">
-            <div>[[START YEAR]]–Present</div>
-            <div>
-              <h3>[[Actual role title]]</h3>
-              <p>[[Organization or consulting practice]]</p>
-              <p>[[Responsibilities, technologies, and verified results.]]</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div>[[START YEAR]]–[[END YEAR]]</div>
-            <div>
-              <h3>[[Actual role title]]</h3>
-              <p>[[Organization]]</p>
-              <p>[[Responsibilities, technologies, and verified results.]]</p>
-            </div>
-          </article>
+    <section class="section section-alt" id="resume">
+      <div class="container two-column">
+        <div class="section-intro">
+          <p class="eyebrow">04 / RESUME</p>
+          <h2>Experience, technical depth, and delivery focus.</h2>
+          <a class="text-link" href="/resume.pdf" target="_blank" rel="noopener">
+            Download full resume <span aria-hidden="true">↓</span>
+          </a>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-dark">
-      <div class="container">
-        <p class="eyebrow">Technical focus</p>
-        <h2>Skills and methods</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>AI and data</h3>
-            <p>Python, RAG, LLM applications, MCP, vector search, SQL, analytics engineering.</p>
-          </article>
-          <article class="card">
-            <h3>Architecture</h3>
-            <p>APIs, systems integration, workflow design, governance, technical documentation.</p>
-          </article>
-          <article class="card">
-            <h3>Platform</h3>
-            <p>Docker, Docker Compose, Linux, CI/CD, observability, operational reliability.</p>
-          </article>
+        <div class="section-body resume-content">
+          <div class="resume-block">
+            <p class="resume-label">Professional summary</p>
+            <p>
+              [[Add a 3–5 sentence resume summary. Example: Technical architect and AI/data
+              systems practitioner with experience designing agentic AI, RAG, data platforms,
+              enterprise integrations, containerized services, and reliable delivery workflows.]]
+            </p>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Core technical skills</p>
+            <div class="skill-columns">
+              <div>
+                <strong>AI & Data</strong>
+                <span>Python, RAG, LLMs, MCP, embeddings, vector search, SQL, analytics engineering</span>
+              </div>
+              <div>
+                <strong>Architecture</strong>
+                <span>APIs, integration, workflow design, enterprise systems, governance, documentation</span>
+              </div>
+              <div>
+                <strong>Platform & DevOps</strong>
+                <span>Docker, Docker Compose, Linux, CI/CD, observability, cloud-native patterns</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Experience</p>
+
+            <article class="timeline-item">
+              <div class="timeline-date">[[YYYY]] — Present</div>
+              <div>
+                <h3>[[TITLE OR ROLE]]</h3>
+                <p class="timeline-company">[[COMPANY / CONSULTING PRACTICE]]</p>
+                <p>[[Add 1–3 concise, outcome-oriented bullets or sentences about responsibilities and results.]]</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">[[YYYY]] — [[YYYY]]</div>
+              <div>
+                <h3>[[TITLE OR ROLE]]</h3>
+                <p class="timeline-company">[[COMPANY]]</p>
+                <p>[[Add 1–3 concise, outcome-oriented bullets or sentences about responsibilities and results.]]</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-date">[[YYYY]] — [[YYYY]]</div>
+              <div>
+                <h3>[[TITLE OR ROLE]]</h3>
+                <p class="timeline-company">[[COMPANY]]</p>
+                <p>[[Add 1–3 concise, outcome-oriented bullets or sentences about responsibilities and results.]]</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-label">Education & credentials</p>
+            <p>[[Add degree(s), institution(s), relevant certifications, or professional development.]]</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 [[YOUR NAME]].</p>
-      <p><a href="/#contact">Contact</a> · <a href="https://www.linkedin.com/in/xaimpl">LinkedIn</a></p>
+    <div class="container footer-wrap">
+      <p>© <span id="year">2026</span> [[YOUR NAME]]. All rights reserved.</p>
+      <p>Built for clear thinking, reliable systems, and useful automation.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
