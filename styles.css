@@ -885,3 +885,27 @@ h1 span {
     transform-origin: center;
   }
 }
+
+/* Resume: use the full width below the introduction. */
+#resume .two-column {
+  row-gap: 38px;
+}
+
+#resume .resume-content {
+  display: contents;
+}
+
+#resume .resume-content > .resume-block:first-child {
+  grid-column: 2;
+}
+
+#resume .resume-content > .resume-block:not(:first-child) {
+  grid-column: 1 / -1;
+}
+
+/* Match the existing one-column breakpoint. */
+@media (max-width: 980px) {
+  #resume .resume-content > .resume-block:first-child {
+    grid-column: 1 / -1;
+  }
+}
