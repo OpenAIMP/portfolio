@@ -3,21 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="About [[YOUR NAME]] — agentic AI, data engineering, software architecture, and operational automation."
-  >
+  <meta name="description" content="[[YOUR NAME]] — Agentic AI, data engineering, software architecture, and intelligent workflow automation.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#07111f">
 
-  <title>About | [[YOUR NAME]]</title>
+  <title>[[YOUR NAME]] | Agentic AI & Systems Architecture</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 
@@ -32,10 +26,10 @@
       </a>
 
       <nav class="main-nav" aria-label="Primary navigation">
-        <a href="/about/" aria-current="page">About</a>
-        <a href="/expertise/">Expertise</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resume/">Resume</a>
+        <a href="/#about">About</a>
+        <a href="/#expertise">Expertise</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#resume">Resume</a>
         <a href="/#contact">Contact</a>
       </nav>
 
@@ -48,7 +42,7 @@
       <div class="container two-column">
         <div class="section-intro">
           <p class="eyebrow">01 / ABOUT</p>
-          <h1>Systems thinking for AI that must work in the real world.</h1>
+          <h2>Systems thinking for AI that must work in the real world.</h2>
         </div>
 
         <div class="section-body">
@@ -68,19 +62,17 @@
           <div class="principles">
             <article>
               <span>01</span>
-              <h2>Grounded</h2>
+              <h3>Grounded</h3>
               <p>Use trusted sources, metadata, citations, and measurable quality controls.</p>
             </article>
-
             <article>
               <span>02</span>
-              <h2>Integrated</h2>
+              <h3>Integrated</h3>
               <p>Connect agents to APIs, databases, documents, and enterprise workflows.</p>
             </article>
-
             <article>
               <span>03</span>
-              <h2>Governed</h2>
+              <h3>Governed</h3>
               <p>Build permissioning, approval gates, logging, evaluation, and fallback paths.</p>
             </article>
           </div>
@@ -91,9 +83,13 @@
 
   <footer class="site-footer">
     <div class="container footer-wrap">
-      <p>© 2026 [[YOUR NAME]]. All rights reserved.</p>
+      <p>© <span id="year">2026</span> [[YOUR NAME]]. All rights reserved.</p>
       <p>Built for clear thinking, reliable systems, and useful automation.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
