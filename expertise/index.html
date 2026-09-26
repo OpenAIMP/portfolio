@@ -3,75 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Agentic AI, RAG, data engineering, and platform integration capabilities.">
-  <title>Expertise | [[YOUR NAME]]</title>
+  <meta name="description" content="[[YOUR NAME]] — Agentic AI, data engineering, software architecture, and intelligent workflow automation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#07111f">
+
+  <title>[[YOUR NAME]] | Agentic AI & Systems Architecture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="Home">
-        <span class="brand-mark">&lt;/&gt;</span><span>XA</span>
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Homepage">
+        <span class="brand-mark">&lt;/&gt;</span>
+        <span>[[YOUR INITIALS]]</span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/expertise/" aria-current="page">Expertise</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resume/">Resume</a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="/#about">About</a>
+        <a href="/#expertise">Expertise</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#resume">Resume</a>
+        <a href="/#contact">Contact</a>
       </nav>
-      <a class="nav-cta" href="/#contact">Contact</a>
+
+      <a class="nav-cta" href="/#contact">Start a conversation</a>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="page-intro">
+    <section class="section section-dark" id="expertise">
       <div class="container">
-        <p class="eyebrow">Expertise</p>
-        <h1>Architecture, implementation, and operational reliability.</h1>
-        <p class="lead">
-          Capabilities spanning agentic workflows, knowledge systems,
-          data engineering, and platform integration.
-        </p>
-      </div>
-    </section>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / EXPERTISE</p>
+            <h2>Capabilities across the full delivery lifecycle.</h2>
+          </div>
+          <p>
+            From strategy and architecture through prototyping, implementation,
+            documentation, and operational improvement.
+          </p>
+        </div>
 
-    <section class="section">
-      <div class="container cards">
-        <article class="card">
-          <p class="kicker">A1</p>
-          <h2>Agentic AI systems</h2>
-          <p>Tool-using agents, workflow orchestration, MCP, approvals, memory, and evaluation.</p>
-        </article>
+        <div class="capability-grid">
+          <article class="capability-card">
+            <span class="card-index">A1</span>
+            <h3>Agentic AI Systems</h3>
+            <p>AI agents, multi-step planning, tool use, approvals, memory, evaluation, and operational controls.</p>
+            <ul>
+              <li>Tool-using agents</li>
+              <li>MCP integrations</li>
+              <li>Human approval workflows</li>
+            </ul>
+          </article>
 
-        <article class="card">
-          <p class="kicker">A2</p>
-          <h2>RAG and knowledge</h2>
-          <p>Document ingestion, OCR, chunking, search, reranking, citations, and answer validation.</p>
-        </article>
+          <article class="capability-card">
+            <span class="card-index">A2</span>
+            <h3>RAG & Knowledge Systems</h3>
+            <p>Document ingestion, OCR, chunking, retrieval, reranking, citations, and knowledge-access interfaces.</p>
+            <ul>
+              <li>Private knowledge assistants</li>
+              <li>Document intelligence</li>
+              <li>Vector and hybrid search</li>
+            </ul>
+          </article>
 
-        <article class="card">
-          <p class="kicker">A3</p>
-          <h2>Data and analytics</h2>
-          <p>ETL/ELT, SQL, data modeling, semantic layers, data quality, and decision support.</p>
-        </article>
+          <article class="capability-card">
+            <span class="card-index">A3</span>
+            <h3>Data & Analytics Engineering</h3>
+            <p>Data pipelines, semantic modeling, SQL, analytics workflows, data quality, and decision-support systems.</p>
+            <ul>
+              <li>ETL / ELT pipelines</li>
+              <li>Analytics and reporting</li>
+              <li>Data modeling and governance</li>
+            </ul>
+          </article>
 
-        <article class="card">
-          <p class="kicker">A4</p>
-          <h2>Platforms and integration</h2>
-          <p>APIs, webhooks, Docker, Linux, observability, deployment, and operational controls.</p>
-        </article>
+          <article class="capability-card">
+            <span class="card-index">A4</span>
+            <h3>Platforms & Integration</h3>
+            <p>API architecture, Docker environments, workflow orchestration, observability, and enterprise integration.</p>
+            <ul>
+              <li>REST APIs and webhooks</li>
+              <li>Docker and Linux</li>
+              <li>CI/CD and operational reliability</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 [[YOUR NAME]].</p>
-      <p><a href="/#contact">Contact</a> · <a href="https://www.linkedin.com/in/xaimpl">LinkedIn</a></p>
+    <div class="container footer-wrap">
+      <p>© <span id="year">2026</span> [[YOUR NAME]]. All rights reserved.</p>
+      <p>Built for clear thinking, reliable systems, and useful automation.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
