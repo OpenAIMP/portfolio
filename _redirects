@@ -2,6 +2,13 @@
 # Add path-level redirects here as needed
 # Format: /source-path /destination status-code
 
-# Example:
-# /old-project /projects/old-project 301
-# /resume /resume.pdf 302
+/about /archive/v1/about/ 301
+/about/ /archive/v1/about/ 301
+/expertise /archive/v1/expertise/ 301
+/expertise/ /archive/v1/expertise/ 301
+/projects /archive/v1/projects/ 301
+/projects/ /archive/v1/projects/ 301
+/resume /archive/v1/resume/ 301
+/resume/ /archive/v1/resume/ 301
+/contact /archive/v1/contact/ 301
+/contact/ /archive/v1/contact/ 301
